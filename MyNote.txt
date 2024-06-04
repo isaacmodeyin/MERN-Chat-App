@@ -1,0 +1,23 @@
+------------------------------FRONTEND
+npm create vite@latest .
+npm install
+npm run dev
+
+------------------------------ROOT-FOLDER
+// initialize a node.js project with:
+npm init -y
+ 
+// install the required packages fo the project
+npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken
+
+npm install nodemon --save-dev
+
+------------------------------BACKEND
+// create a file called server.js, update the entry point in the package.json (located at the root folder) to server.js
+
+create an express server in the server.js folder
+
+start server with: npm run server
+
+// Generated rendom code for JWT with git bash using this command 
+openssl rand -base64 32
