@@ -8,7 +8,7 @@ export const signup = async (req, res) => {
     // Destructure properties from the request body
     const { fullName, username, password, confirmPassword, gender } = req.body;
 
-    // Check if the passwords match
+    // Check if the passwords did not match
     if (password !== confirmPassword) {
       return res.status(400).json({ error: "Passwords don't match" });
     }
@@ -20,7 +20,7 @@ export const signup = async (req, res) => {
     if (user) {
       return res.status(400).json({ error: "Username already exists" });
     }
-
+    
     // Generate a salt for hashing the password
     const salt = await bcrypt.genSalt(10);
 
